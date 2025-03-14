@@ -11,6 +11,7 @@ function TabIcon({ focused, icon, title }: any) {
     return (
       <ImageBackground
         source={images.highlight}
+        
         className="flex flex-row w-full flex-1 min-w-[112px] min-h-16 mt-4 justify-center items-center rounded-full overflow-hidden"
       >
         <Image source={icon} tintColor="#151312" className="size-5" />
@@ -31,7 +32,9 @@ function TabIcon({ focused, icon, title }: any) {
 const _layout = () => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#0F0D23" }}>
-      <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+            <StatusBar  hidden={true}/>
+
+      {/* <StatusBar translucent backgroundColor="transparent" barStyle="light-content" /> */}
       <Tabs
         screenOptions={{
           tabBarShowLabel: false,
